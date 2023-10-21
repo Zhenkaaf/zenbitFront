@@ -1,0 +1,79 @@
+.LoginContainer {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+.leftSection {
+  flex: 2;
+  background-image: url("https://w.forfun.com/fetch/27/272e376c421357aef581098ea2e12a29.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rightSection {
+  flex: 1;
+  background-color: #ccc;
+}
+
+.login {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.loginTitle {
+  padding-top: 20px;
+  font-size: 50px;
+}
+.loginForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.loginForm > label {
+  margin: 10px 0px;
+}
+.loginInput {
+  padding: 10px;
+  background-color: white;
+  border: none;
+}
+.loginButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: lightcoral;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.loginButton:hover {
+  background-color: rgb(252, 74, 74);
+}
+.watch__spinner-login:disabled {
+  cursor: not-allowed;
+}
+.watch__spinner-login {
+  background-color: lightcoral;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .leftSection {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .loginTitle {
+    padding-top: 0px;
+    font-size: 40px;
+  }
+}
