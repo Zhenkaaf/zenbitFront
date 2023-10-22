@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Header from "../../components/header/Header";
 import s from "./register.module.css";
 import { useNavigate } from "react-router";
@@ -21,14 +21,17 @@ const Register = () => {
       userEmail: userEmailRef.current.value,
       userPassword: passwordRef.current.value,
     };
-    dispatch(registerAct(authData));
+    dispatch(registerAct(authData)).then(() => {
+      userEmailRef.current.value = "";
+      passwordRef.current.value = "";
+    });
   };
 
   useEffect(() => {
     if (user) {
       navigate("/");
     }
-  }, [user]);
+  }, [user, navigate]);
   return (
     <>
       <Header />

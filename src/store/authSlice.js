@@ -6,12 +6,13 @@ export const loginAct = createAsyncThunk(
   async (authData, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "http://localhost:8001/auth/login",
+        "https://upset-pink-hem.cyclic.app/auth/login",
+        /* "http://localhost:8001/auth/login", */
         authData
       );
       return response.data;
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue(error.message);
     }
   }
 );
@@ -21,12 +22,13 @@ export const registerAct = createAsyncThunk(
   async (authData, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "http://localhost:8001/auth/register",
+        "https://upset-pink-hem.cyclic.app/auth/register",
+        /* "http://localhost:8001/auth/register", */
         authData
       );
       return response.data;
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue(error.message);
     }
   }
 );

@@ -14,22 +14,25 @@ const Login = () => {
   const loginError = useSelector((state) => state.authRed.loginError);
   const user = useSelector((state) => state.authRed.user);
   const dispatch = useDispatch();
-  console.log(user);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const authData = {
       userEmail: userEmailRef.current.value,
       userPassword: passwordRef.current.value,
     };
-    dispatch(loginAct(authData));
-    //
+
+    dispatch(loginAct(authData)).then(() => {
+      userEmailRef.current.value = "";
+      passwordRef.current.value = "";
+    });
   };
 
   useEffect(() => {
     if (user) {
       navigate("/");
     }
-  }, [user]);
+  }, [user, navigate]);
 
   return (
     <>
@@ -60,21 +63,7 @@ const Login = () => {
                 placeholder="password"
                 ref={passwordRef}
               />
-              {/* {isFetching ? (
-                <button
-                  className="watch__spinner-login"
-                  disabled={true}
-                >
-                  <WatchSpinner />
-                </button>
-              ) : (
-                <button
-                  className="loginButton"
-                  type="submit"
-                >
-                  Sign In
-                </button>
-              )} */}
+
               <button
                 className={s.loginButton}
                 type="submit"
