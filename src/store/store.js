@@ -1,5 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import authReducer from "./authSlice";
+import dealsReducer from "./dealsSlice";
 import {
   persistStore,
   persistReducer,
@@ -14,11 +15,13 @@ import storage from "redux-persist/lib/storage";
 
 const rootReducer = combineReducers({
   authRed: authReducer,
+  dealsRed: dealsReducer,
 });
 
 const persistConfig = {
   key: "zenbit",
   storage,
+  whitelist: ["authRed"],
 };
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 

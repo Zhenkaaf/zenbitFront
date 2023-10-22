@@ -80,7 +80,7 @@ const Register = () => {
                 className={s.loginButton}
                 type="submit"
               >
-                Sign In
+                Sign Up
               </button>
               <div>
                 {registerError && (

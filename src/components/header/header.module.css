@@ -69,4 +69,14 @@
     width: max-content;
     padding: 0px 10px 0px 10px;
   }
+  .header__out {
+    width: max-content;
+  }
+  .header__userEmail {
+    padding-left: 10px;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

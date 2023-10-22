@@ -39,7 +39,7 @@ const Login = () => {
       <Header />
       <Preloader />
       <div className={s.loginContainer}>
-        <div className={s.leftSection}>Содержимое левой секции 2/3 ширины</div>
+        <div className={s.leftSection}></div>
         <div className={s.rightSection}>
           <div className={s.login}>
             <span className={s.loginTitle}>Login</span>
