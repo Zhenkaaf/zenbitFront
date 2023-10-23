@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/zenbitFront/static/css/main.96991701.css",
+    "main.css": "/zenbitFront/static/css/main.e7577a82.css",
     "main.js": "/zenbitFront/static/js/main.5961b343.js",
     "static/js/787.28cb0dcd.chunk.js": "/zenbitFront/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/zenbitFront/index.html",
-    "main.96991701.css.map": "/zenbitFront/static/css/main.96991701.css.map",
+    "main.e7577a82.css.map": "/zenbitFront/static/css/main.e7577a82.css.map",
     "main.5961b343.js.map": "/zenbitFront/static/js/main.5961b343.js.map",
     "787.28cb0dcd.chunk.js.map": "/zenbitFront/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96991701.css",
+    "static/css/main.e7577a82.css",
     "static/js/main.5961b343.js"
   ]
 }
