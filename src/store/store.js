@@ -21,7 +21,16 @@ const rootReducer = combineReducers({
 const persistConfig = {
   key: "zenbit",
   storage,
-  whitelist: ["authRed"],
+  stateReconciler: (inboundState, originalState) => {
+    return {
+      ...originalState,
+      authRed: {
+        ...originalState.authRed,
+        user: inboundState.authRed.user,
+      },
+    };
+  },
+  /*  whitelist: ["authRed"], */
 };
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
