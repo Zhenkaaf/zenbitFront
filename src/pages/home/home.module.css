@@ -1,36 +1,8 @@
-/* .HomeContainer {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-image: url("https://w.forfun.com/fetch/a2/a2517c612d33ca455b5447149eceff81.jpeg?w=1470&r=0.5625");
-  background-size: cover;
-  background-position: center;
-}
-
-.header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
-
-.content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.text {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-} */
 .HomeContainer {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 80px);
   background-image: url("https://w.forfun.com/fetch/a2/a2517c612d33ca455b5447149eceff81.jpeg?w=1470&r=0.5625");
   background-size: cover;
   background-position: center;

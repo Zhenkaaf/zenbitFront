@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import Header from "../../components/header/Header";
+
 import s from "./register.module.css";
 import { useNavigate } from "react-router";
 import { registerAct } from "../../store/authSlice";
@@ -34,7 +34,6 @@ const Register = () => {
   }, [user, navigate]);
   return (
     <>
-      <Header />
       <Preloader />
       <div className={s.LoginContainer}>
         <div className={s.leftSection}></div>

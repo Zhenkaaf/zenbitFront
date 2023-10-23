@@ -6,8 +6,7 @@ export const getDealsAct = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        "https://upset-pink-hem.cyclic.app/deals/alldeals"
-        /* "http://localhost:8001/auth/login", */
+        "https://upset-pink-hem.cyclic.app/deal/alldeals"
       );
       return response.data;
     } catch (error) {
@@ -26,7 +25,7 @@ const dealsSlice = createSlice({
     builder
       .addCase(getDealsAct.pending, (state) => {})
       .addCase(getDealsAct.fulfilled, (state, action) => {
-        state.deals = action.payload.allDeals;
+        state.deals = action.payload;
       })
       .addCase(getDealsAct.rejected, (state, action) => {});
   },
