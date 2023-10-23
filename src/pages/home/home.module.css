@@ -38,4 +38,40 @@
 }
 .home__subtitle {
   font-size: 24px;
+  max-width: 822px;
+  padding: 0px 10px;
+}
+.home__btn {
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 24px 10px 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.home__btn:hover {
+  background-color: #b29f7e;
+}
+
+@media screen and (max-width: 1024px) {
+  .home__title {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home__title {
+    font-size: 36px;
+  }
+  .home__subtitle {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .home__title {
+    font-size: 22px;
+  }
+  .home__subtitle {
+    font-size: 16px;
+  }
 }

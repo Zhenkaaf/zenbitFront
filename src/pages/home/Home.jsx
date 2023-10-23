@@ -10,13 +10,11 @@ const Home = () => {
           <h1 className={s.home__title}>The chemical negatively charged</h1>
           <p className={s.home__subtitle}>
             Numerous calculations predict, and experiments confirm, that the
-            force field
-            <br />
-            reflects the beam, while the mass defect is not formed. The chemical
-            compound is
-            <br /> negatively charged. Twhile the mass defect is{" "}
+            force field reflects the beam, while the mass defect is not formed.
+            The chemical compound is negatively charged. Twhile the mass defect
+            is
           </p>
-          <button>Get Started</button>
+          <button className={s.home__btn}>Get Started</button>
         </div>
       </div>
       <Content />

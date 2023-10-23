@@ -1,31 +1,16 @@
-import { useEffect, useRef } from "react";
-
 import s from "./register.module.css";
+import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { registerAct } from "../../store/authSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Preloader from "../../components/preloader/Preloader";
+import Form from "../../components/form/Form";
 
 const Register = () => {
-  const userEmailRef = useRef();
-  const passwordRef = useRef();
   const navigate = useNavigate();
   const registerError = useSelector((state) => state.authRed.registerError);
   const user = useSelector((state) => state.authRed.user);
-
-  const dispatch = useDispatch();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const authData = {
-      userEmail: userEmailRef.current.value,
-      userPassword: passwordRef.current.value,
-    };
-    dispatch(registerAct(authData)).then(() => {
-      userEmailRef.current.value = "";
-      passwordRef.current.value = "";
-    });
-  };
 
   useEffect(() => {
     if (user) {
@@ -35,62 +20,30 @@ const Register = () => {
   return (
     <>
       <Preloader />
-      <div className={s.LoginContainer}>
+      <div className={s.registerContainer}>
         <div className={s.leftSection}></div>
         <div className={s.rightSection}>
-          <div className={s.login}>
-            <span className={s.loginTitle}>Register</span>
-            <form
-              action=""
-              className={s.loginForm}
-              onSubmit={handleSubmit}
-            >
-              <label htmlFor="">Useremail</label>
-              <input
-                className={s.loginInput}
-                type="text"
-                placeholder="useremail"
-                ref={userEmailRef}
-              />
-
-              <label htmlFor="">Password</label>
-              <input
-                className={s.loginInput}
-                type="password"
-                placeholder="password"
-                ref={passwordRef}
-              />
-              {/* {isFetching ? (
-                <button
-                  className="watch__spinner-login"
-                  disabled={true}
-                >
-                  <WatchSpinner />
-                </button>
-              ) : (
-                <button
-                  className="loginButton"
-                  type="submit"
-                >
-                  Sign In
-                </button>
-              )} */}
-              <button
-                className={s.loginButton}
-                type="submit"
-              >
-                Sign Up
-              </button>
-              <div>
-                {registerError && (
-                  <span style={{ color: "red" }}>Something went wrong!</span>
-                )}
-              </div>
-            </form>
+          <div className={s.register}>
+            <span className={s.register__title}>Register</span>
+            <Form
+              formAction={registerAct}
+              btnText="Sign Up"
+            />
+            <div>
+              {registerError && (
+                <span style={{ color: "red" }}>Something went wrong!</span>
+              )}
+            </div>
 
             <div>
               <p>
-                Already have an account? <Link to="/login">Sign In</Link>
+                Already have an account?{" "}
+                <Link
+                  className={s.register__link}
+                  to="/login"
+                >
+                  <span className={s.link__text}>Sign In</span>
+                </Link>
               </p>
             </div>
           </div>

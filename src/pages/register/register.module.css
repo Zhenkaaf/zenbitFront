@@ -1,4 +1,4 @@
-.LoginContainer {
+.registerContainer {
   display: flex;
   height: calc(100vh - 80px);
 }
@@ -16,40 +16,22 @@
   background-color: #f0f6ff;
 }
 
-.login {
+.register {
   height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
-.loginTitle {
+.register__title {
   font-size: 50px;
 }
-.loginForm {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
+
+.register__link {
+  text-decoration: none;
 }
-.loginForm > label {
-  margin: 10px 0px;
-}
-.loginInput {
-  padding: 10px;
-  background-color: white;
-  border: none;
-}
-.loginButton {
-  margin-top: 20px;
-  cursor: pointer;
-  background-color: lightcoral;
-  border: none;
-  color: white;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-.loginButton:hover {
-  background-color: rgb(252, 74, 74);
+.link__text {
+  color: #b29f7e;
 }
 
 @media screen and (max-width: 768px) {
@@ -58,7 +40,7 @@
   }
 }
 @media screen and (max-width: 480px) {
-  .loginTitle {
+  .register__title {
     font-size: 40px;
   }
 }
