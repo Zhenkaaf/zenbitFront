@@ -1,4 +1,4 @@
-.HomeContainer {
+.home {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9,79 +9,33 @@
   position: relative;
 }
 
-.HomeContainer::before {
+.home::before {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.7
-  ); /* Цвет темного оверлея с прозрачностью 0.5 */
-  z-index: 1; /* Помещаем оверлей над фоновой картинкой */
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 
-.content {
+.home__content {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2; /* Поднимаем контент над оверлеем */
-}
-
-.text {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-}
-
-/* background-image: url("https://w.forfun.com/fetch/6c/6c0cf748db116fabaa70199a35327258.jpeg"); */
-
-/* .HomeContainer {
-  position: relative;
-  display: flex;
   flex-direction: column;
-  height: 100vh;
-  position: relative;
-}
-
-.HomeContainer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url("https://w.forfun.com/fetch/a2/a2517c612d33ca455b5447149eceff81.jpeg?w=1470&r=0.5625");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5; 
-}
-
-.header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-
-.text {
-  font-size: 24px;
-  font-weight: bold;
+  z-index: 2;
   color: #fff;
-} */
+  text-align: center;
+}
+
+.home__title {
+  margin: 0px;
+  font-size: 64px;
+  font-weight: bold;
+}
+.home__subtitle {
+  font-size: 24px;
+}

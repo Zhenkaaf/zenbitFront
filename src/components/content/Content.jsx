@@ -23,8 +23,8 @@ const Content = () => {
               >
                 <img
                   className={s.item__img}
-                  src="https://st5.depositphotos.com/28991456/64791/i/450/depositphotos_647918790-stock-photo-skyscrapers-building-city.jpg"
-                  alt=""
+                  src={item.image}
+                  alt="Photo of city"
                 />
                 <div className={s.item__info}>
                   <h4 className={s.info__title}>{item.title}</h4>
