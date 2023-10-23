@@ -23,9 +23,6 @@
   flex-direction: column;
   justify-content: center;
 }
-.register__title {
-  font-size: 50px;
-}
 
 .register__link {
   text-decoration: none;
@@ -37,10 +34,5 @@
 @media screen and (max-width: 768px) {
   .leftSection {
     display: none;
-  }
-}
-@media screen and (max-width: 480px) {
-  .register__title {
-    font-size: 40px;
   }
 }

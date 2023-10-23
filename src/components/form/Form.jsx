@@ -2,7 +2,7 @@ import s from "./form.module.css";
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
 
-const Form = ({ formAction, btnText }) => {
+const Form = ({ formAction, btnText, formTitle }) => {
   const userEmailRef = useRef();
   const passwordRef = useRef();
   const dispatch = useDispatch();
@@ -26,11 +26,12 @@ const Form = ({ formAction, btnText }) => {
       className={s.form}
       onSubmit={handleSubmit}
     >
-      <label htmlFor="">Useremail</label>
+      <h4 className={s.form__title}>{formTitle}</h4>
+      <label htmlFor="">Email</label>
       <input
         className={s.form__input}
         type="text"
-        placeholder="useremail"
+        placeholder="Email"
         ref={userEmailRef}
       />
 
@@ -38,9 +39,14 @@ const Form = ({ formAction, btnText }) => {
       <input
         className={s.form__input}
         type="password"
-        placeholder="password"
+        placeholder="Password"
         ref={passwordRef}
       />
+      {formTitle === "Login" ? (
+        <p className={s.form__forgotPass}>Forgot password?</p>
+      ) : (
+        ""
+      )}
 
       <button
         className={s.form__btn}

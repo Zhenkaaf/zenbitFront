@@ -25,10 +25,10 @@ const Login = () => {
         <div className={s.leftSection}></div>
         <div className={s.rightSection}>
           <div className={s.login}>
-            <span className={s.login__title}>Login</span>
             <Form
               formAction={loginAct}
               btnText="Sign In"
+              formTitle="Login"
             />
             <div>
               {loginError && (

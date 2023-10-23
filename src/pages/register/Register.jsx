@@ -24,10 +24,10 @@ const Register = () => {
         <div className={s.leftSection}></div>
         <div className={s.rightSection}>
           <div className={s.register}>
-            <span className={s.register__title}>Register</span>
             <Form
               formAction={registerAct}
               btnText="Sign Up"
+              formTitle="Register"
             />
             <div>
               {registerError && (
